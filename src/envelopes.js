@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import './styles/envelopes.css';
-import SwitchABC from './switchABC';
-import Fader from './fader';
-import Bulb from './bulb';
+import { useState, useEffect } from "react";
+import "./styles/envelopes.css";
+import SwitchABC from "./switchABC";
+import Fader from "./fader";
+import Bulb from "./bulb";
 
 const Envelopes = (props) => {
   const { patches, patchNumber, stagingPatch } = props;
@@ -34,10 +34,10 @@ const Envelopes = (props) => {
     <div className="absolute">
       <div id="envSelectS">
         <SwitchABC
-          orientation={'Vertical'}
+          orientation={"Vertical"}
           position={eSS}
           setPosition={setESS}
-          setting={'envSelectS'}
+          setting={"envSelectS"}
           stagingPatch={stagingPatch}
         />
       </div>
@@ -57,7 +57,7 @@ const Envelopes = (props) => {
         <Fader
           position={attackFader}
           setPosition={setAttackFader}
-          setting={'attackFader'}
+          setting={"attackFader"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].attackFader}
         />
@@ -70,7 +70,7 @@ const Envelopes = (props) => {
         <Fader
           position={decayFader}
           setPosition={setDecayFader}
-          setting={'decayFader'}
+          setting={"decayFader"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].decayFader}
         />
@@ -82,7 +82,7 @@ const Envelopes = (props) => {
         <Fader
           position={sustainFader}
           setPosition={setSustainFader}
-          setting={'sustainFader'}
+          setting={"sustainFader"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].sustainFader}
         />
@@ -94,7 +94,7 @@ const Envelopes = (props) => {
         <Fader
           position={releaseFader}
           setPosition={setReleaseFader}
-          setting={'releaseFader'}
+          setting={"releaseFader"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].releaseFader}
         />
@@ -104,10 +104,10 @@ const Envelopes = (props) => {
       </p>
       <div id="triggeringS">
         <SwitchABC
-          orientation={'Vertical'}
+          orientation={"Vertical"}
           position={triggeringS}
           setPosition={setTriggeringS}
-          setting={'triggeringS'}
+          setting={"triggeringS"}
           stagingPatch={stagingPatch}
         />
       </div>
@@ -115,13 +115,13 @@ const Envelopes = (props) => {
         Triggering
       </p>
       <div id="triggeringBulb1">
-        <Bulb on={triggeringS === 'A'} />
+        <Bulb on={triggeringS === "A"} />
       </div>
       <div id="triggeringBulb2">
-        <Bulb on={triggeringS === 'B'} />
+        <Bulb on={triggeringS === "B"} />
       </div>
       <div id="triggeringBulb3">
-        <Bulb on={triggeringS === 'C'} />
+        <Bulb on={triggeringS === "C"} />
       </div>
       <p id="triggeringBulbL1" className="subLabelLarge">
         Autoglide

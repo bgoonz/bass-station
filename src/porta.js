@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import './styles/porta.css';
-import Knob from './knob';
-import KnobBorder from './knobBorder';
+import { useState, useEffect } from "react";
+import "./styles/porta.css";
+import Knob from "./knob";
+import KnobBorder from "./knobBorder";
 
 const Porta = (props) => {
   const { patches, patchNumber, stagingPatch } = props;
@@ -20,7 +20,7 @@ const Porta = (props) => {
         <Knob
           rotation={glideTimeKnob}
           setRotation={setGlideTimeKnob}
-          setting={'glideTimeK'}
+          setting={"glideTimeK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].glideTimeK}
         />

@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import './styles/fader.css';
+import { useRef } from "react";
+import "./styles/fader.css";
 
 const Fader = (props) => {
   const { position, setPosition, setting, stagingPatch, originalLevel } = props;
@@ -9,9 +9,9 @@ const Fader = (props) => {
   }
   const bigLines = [1, 6, 11];
 
-  let amountBackArrowLight = document.getElementById('amountBackArrowLight');
+  let amountBackArrowLight = document.getElementById("amountBackArrowLight");
   let amountForwardArrowLight = document.getElementById(
-    'amountForwardArrowLight'
+    "amountForwardArrowLight"
   );
 
   const faderMaster = useRef(null);
@@ -24,16 +24,16 @@ const Fader = (props) => {
     restingPlace.current = position;
     faderAdjustActive.current = true;
     clientStart.current = e.clientY;
-    faderMaster.current.style.cursor = 'grabbing';
-    amountBackArrowLight = document.getElementById('amountBackArrowLight');
+    faderMaster.current.style.cursor = "grabbing";
+    amountBackArrowLight = document.getElementById("amountBackArrowLight");
     amountForwardArrowLight = document.getElementById(
-      'amountForwardArrowLight'
+      "amountForwardArrowLight"
     );
   };
 
   const disengageFaderAdjust = () => {
     faderAdjustActive.current = false;
-    faderMaster.current.style.cursor = 'default';
+    faderMaster.current.style.cursor = "default";
     restingPlace.current = position;
   };
 
@@ -45,14 +45,14 @@ const Fader = (props) => {
         setPosition(moveDifference);
         stagingPatch.current[setting] = moveDifference;
         if (originalLevel > moveDifference) {
-          amountForwardArrowLight.className = 'amountArrowLightOn';
-          amountBackArrowLight.className = 'amountArrowLightOff';
+          amountForwardArrowLight.className = "amountArrowLightOn";
+          amountBackArrowLight.className = "amountArrowLightOff";
         } else if (originalLevel < moveDifference) {
-          amountBackArrowLight.className = 'amountArrowLightOn';
-          amountForwardArrowLight.className = 'amountArrowLightOff';
+          amountBackArrowLight.className = "amountArrowLightOn";
+          amountForwardArrowLight.className = "amountArrowLightOff";
         } else if (originalLevel === moveDifference) {
-          amountBackArrowLight.className = 'amountArrowLightOff';
-          amountForwardArrowLight.className = 'amountArrowLightOff';
+          amountBackArrowLight.className = "amountArrowLightOff";
+          amountForwardArrowLight.className = "amountArrowLightOff";
         }
       }
     }

@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import './styles/lFOS.css';
-import Knob from './knob';
-import KnobBorder from './knobBorder';
-import Bulb from './bulb';
-import SwitchAB from './switchAB';
+import { useState, useEffect } from "react";
+import "./styles/lFOS.css";
+import Knob from "./knob";
+import KnobBorder from "./knobBorder";
+import Bulb from "./bulb";
+import SwitchAB from "./switchAB";
 
 const LFOS = (props) => {
   const { patches, patchNumber, stagingPatch } = props;
@@ -42,25 +42,25 @@ const LFOS = (props) => {
       />
       <div id="lfosLeftBulb1">
         <Bulb
-          blinkClass={lFO1Wave === 1 && 'lFOSBlink'}
+          blinkClass={lFO1Wave === 1 && "lFOSBlink"}
           animation={`lFOSBlink ${convertBPM(lFO1Knob)}ms linear 0s infinite`}
         />
       </div>
       <div id="lfosLeftBulb2">
         <Bulb
-          blinkClass={lFO1Wave === 2 && 'lFOSBlink'}
+          blinkClass={lFO1Wave === 2 && "lFOSBlink"}
           animation={`lFOSBlink ${convertBPM(lFO1Knob)}ms linear 0s infinite`}
         />
       </div>
       <div id="lfosLeftBulb3">
         <Bulb
-          blinkClass={lFO1Wave === 3 && 'lFOSBlink'}
+          blinkClass={lFO1Wave === 3 && "lFOSBlink"}
           animation={`lFOSBlink ${convertBPM(lFO1Knob)}ms linear 0s infinite`}
         />
       </div>
       <div id="lfosLeftBulb4">
         <Bulb
-          blinkClass={lFO1Wave === 4 && 'lFOSBlink'}
+          blinkClass={lFO1Wave === 4 && "lFOSBlink"}
           animation={`lFOSBlink ${convertBPM(
             lFO1Knob
           )}ms step-start 0s infinite`}
@@ -85,7 +85,7 @@ const LFOS = (props) => {
         <Knob
           rotation={lFO1Knob}
           setRotation={setLFO1Knob}
-          setting={'lfosLFO1K'}
+          setting={"lfosLFO1K"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].lfosLFO1K}
         />
@@ -94,8 +94,8 @@ const LFOS = (props) => {
         <SwitchAB
           position={speedS}
           setPosition={setSpeedS}
-          orientation={'Vertical'}
-          setting={'speedDelayS'}
+          orientation={"Vertical"}
+          setting={"speedDelayS"}
           stagingPatch={stagingPatch}
         />
       </div>
@@ -104,7 +104,7 @@ const LFOS = (props) => {
         <Knob
           rotation={lFO2Knob}
           setRotation={setLFO2Knob}
-          setting={'lfosLFO2K'}
+          setting={"lfosLFO2K"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].lfosLFO2K}
         />
@@ -125,25 +125,25 @@ const LFOS = (props) => {
       </p>
       <div id="lfosRightBulb1">
         <Bulb
-          blinkClass={lFO2Wave === 1 && 'lFOSBlink'}
+          blinkClass={lFO2Wave === 1 && "lFOSBlink"}
           animation={`lFOSBlink ${convertBPM(lFO2Knob)}ms linear 0s infinite`}
         />
       </div>
       <div id="lfosRightBulb2">
         <Bulb
-          blinkClass={lFO2Wave === 2 && 'lFOSBlink'}
+          blinkClass={lFO2Wave === 2 && "lFOSBlink"}
           animation={`lFOSBlink ${convertBPM(lFO2Knob)}ms linear 0s infinite`}
         />
       </div>
       <div id="lfosRightBulb3">
         <Bulb
-          blinkClass={lFO2Wave === 3 && 'lFOSBlink'}
+          blinkClass={lFO2Wave === 3 && "lFOSBlink"}
           animation={`lFOSBlink ${convertBPM(lFO2Knob)}ms linear 0s infinite`}
         />
       </div>
       <div id="lfosRightBulb4">
         <Bulb
-          blinkClass={lFO2Wave === 4 && 'lFOSBlink'}
+          blinkClass={lFO2Wave === 4 && "lFOSBlink"}
           animation={`lFOSBlink ${convertBPM(
             lFO2Knob
           )}ms step-start 0s infinite`}

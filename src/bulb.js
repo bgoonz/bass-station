@@ -1,4 +1,4 @@
-import './styles/bulb.css';
+import "./styles/bulb.css";
 
 const Bulb = (props) => {
   const { on, blinkClass, animation } = props;
@@ -10,7 +10,7 @@ const Bulb = (props) => {
           style={{ animation: `${animation}` }}
         />
       ) : (
-        <div className={`bulbMaster ${on ? 'bulbOn' : 'bulbOff'}`} />
+        <div className={`bulbMaster ${on ? "bulbOn" : "bulbOff"}`} />
       )}
     </div>
   );

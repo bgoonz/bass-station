@@ -1,4 +1,4 @@
-import './styles/knobBorder.css';
+import "./styles/knobBorder.css";
 
 const knobBorderArr = [];
 
@@ -18,7 +18,7 @@ const KnobBorder = (props) => {
               style={{ transform: `rotate(${idx * 30}deg)` }}
               key={`knobDot${idx}`}
             >
-              <div className="knobBorderDotDot" style={{ display: 'none' }} />
+              <div className="knobBorderDotDot" style={{ display: "none" }} />
             </div>
           );
         } else if (props.highNoon & (idx === 0)) {

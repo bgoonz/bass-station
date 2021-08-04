@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import './styles/oscillatorsPanel.css';
-import Knob from './knob';
-import KnobBorder from './knobBorder';
-import Bulb from './bulb';
-import SwitchAB from './switchAB';
-import SwitchABC from './switchABC';
+import { useState, useEffect } from "react";
+import "./styles/oscillatorsPanel.css";
+import Knob from "./knob";
+import KnobBorder from "./knobBorder";
+import Bulb from "./bulb";
+import SwitchAB from "./switchAB";
+import SwitchABC from "./switchABC";
 
 const Oscillators = (props) => {
   const { patches, patchNumber, stagingPatch } = props;
@@ -51,7 +51,7 @@ const Oscillators = (props) => {
         <Knob
           rotation={coarseKnob}
           setRotation={setCoarseKnob}
-          setting={'coarseK'}
+          setting={"coarseK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].coarseK}
         />
@@ -64,7 +64,7 @@ const Oscillators = (props) => {
         <Knob
           rotation={fineKnob}
           setRotation={setFineKnob}
-          setting={'fineK'}
+          setting={"fineK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].fineK}
         />
@@ -77,7 +77,7 @@ const Oscillators = (props) => {
         <Knob
           rotation={mEDKnob}
           setRotation={setMEDKnob}
-          setting={'MEDK'}
+          setting={"MEDK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].MEDK}
         />
@@ -90,7 +90,7 @@ const Oscillators = (props) => {
         <Knob
           rotation={oSCLFO1Knob}
           setRotation={setOSCLFO1Knob}
-          setting={'LFO1K'}
+          setting={"LFO1K"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].LFO1K}
         />
@@ -103,7 +103,7 @@ const Oscillators = (props) => {
         <Knob
           rotation={pulseWidthKnob}
           setRotation={setPulseWidthKnob}
-          setting={'pulseWidthK'}
+          setting={"pulseWidthK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].pulseWidthK}
         />
@@ -210,10 +210,10 @@ const Oscillators = (props) => {
       </p>
       <div id="oscSelectS">
         <SwitchAB
-          orientation={'Horizontal'}
+          orientation={"Horizontal"}
           position={oscSelectS}
           setPosition={setOscSelectS}
-          setting={'oscSelectS'}
+          setting={"oscSelectS"}
           stagingPatch={stagingPatch}
         />
       </div>
@@ -238,7 +238,7 @@ const Oscillators = (props) => {
           orientation="Horizontal"
           position={mMLS}
           setPosition={setMMLS}
-          setting={'pulseWidthS'}
+          setting={"pulseWidthS"}
           stagingPatch={stagingPatch}
         />
       </div>
@@ -252,19 +252,19 @@ const Oscillators = (props) => {
       </p>
       <div id="subOscOctaveS">
         <SwitchAB
-          orientation={'Vertical'}
+          orientation={"Vertical"}
           position={octaveSelectS}
           setPosition={setOctaveSelectS}
-          setting={'subOscOctaveS'}
+          setting={"subOscOctaveS"}
           stagingPatch={stagingPatch}
         />
       </div>
       <div id="subOscWaveS">
         <SwitchABC
-          orientation={'Vertical'}
+          orientation={"Vertical"}
           position={subOscWaveS}
           setPosition={setSubOscWaveS}
-          setting={'subOscWaveS'}
+          setting={"subOscWaveS"}
           stagingPatch={stagingPatch}
         />
       </div>
@@ -272,19 +272,19 @@ const Oscillators = (props) => {
         Octave
       </p>
       <div id="subOscOctave1B">
-        <Bulb on={octaveSelectS === 'A'} />
+        <Bulb on={octaveSelectS === "A"} />
       </div>
       <div id="subOscOctave2B">
-        <Bulb on={octaveSelectS === 'B'} />
+        <Bulb on={octaveSelectS === "B"} />
       </div>
       <div id="subOscWave1B">
-        <Bulb on={subOscWaveS === 'A'} />
+        <Bulb on={subOscWaveS === "A"} />
       </div>
       <div id="subOscWave2B">
-        <Bulb on={subOscWaveS === 'B'} />
+        <Bulb on={subOscWaveS === "B"} />
       </div>
       <div id="subOscWave3B">
-        <Bulb on={subOscWaveS === 'C'} />
+        <Bulb on={subOscWaveS === "C"} />
       </div>
       <p id="subOscOctave1L" className="subLabelSmall">
         - 1

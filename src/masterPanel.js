@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import Knob from './knob';
-import KnobBorder from './knobBorder';
-import './styles/masterPanel.css';
+import { useState, useEffect, useRef } from "react";
+import Knob from "./knob";
+import KnobBorder from "./knobBorder";
+import "./styles/masterPanel.css";
 
 const MasterPanel = (props) => {
   const { patchNumber, setPatchNumber, stagingPatch, setPatches, patches } =
@@ -21,9 +21,9 @@ const MasterPanel = (props) => {
     setVolumeKnob(patches[patchNumber].volumeK);
   }, [patches, patchNumber]);
 
-  document.addEventListener('click', function (e) {
+  document.addEventListener("click", function (e) {
     if (savePending) {
-      if (e.target.id !== 'saveBL' && e.target.id !== 'saveB') {
+      if (e.target.id !== "saveBL" && e.target.id !== "saveB") {
         setSavePending(false);
       }
     }
@@ -51,7 +51,7 @@ const MasterPanel = (props) => {
         <div id="redPositioner1" className="redPositioner">
           <p
             id="screenNumber1"
-            className={`screenNumber ${savePending && 'savePending'}`}
+            className={`screenNumber ${savePending && "savePending"}`}
             ref={screenNumber1}
           >
             {Math.floor(patchNumber % 10)}
@@ -60,7 +60,7 @@ const MasterPanel = (props) => {
         <div id="redPositioner2" className="redPositioner">
           <p
             id="screenNumber2"
-            className={`screenNumber ${savePending && 'savePending'}`}
+            className={`screenNumber ${savePending && "savePending"}`}
             ref={screenNumber2}
           >
             {patchNumber >= 10 && Math.floor((patchNumber / 10) % 10)}
@@ -69,7 +69,7 @@ const MasterPanel = (props) => {
         <div id="redPositioner3" className="redPositioner">
           <p
             id="screenNumber3"
-            className={`screenNumber ${savePending && 'savePending'}`}
+            className={`screenNumber ${savePending && "savePending"}`}
             ref={screenNumber3}
           >
             {patchNumber >= 100 && Math.floor((patchNumber / 100) % 10)}
@@ -82,7 +82,7 @@ const MasterPanel = (props) => {
           className="amountArrowLightOff"
           ref={lessThan}
           onAnimationEnd={() => {
-            lessThan.current.className = 'amountArrowLightOff';
+            lessThan.current.className = "amountArrowLightOff";
           }}
         />
         <div
@@ -90,7 +90,7 @@ const MasterPanel = (props) => {
           className="amountArrowLightOff"
           ref={greaterThan}
           onAnimationEnd={() => {
-            greaterThan.current.className = 'amountArrowLightOff';
+            greaterThan.current.className = "amountArrowLightOff";
           }}
         />
       </div>
@@ -99,7 +99,7 @@ const MasterPanel = (props) => {
         <Knob
           rotation={volumeKnob}
           setRotation={setVolumeKnob}
-          setting={'volumeK'}
+          setting={"volumeK"}
           stagingPatch={stagingPatch}
         />
         <p id="volumeKL" className="knobLabel">
@@ -115,7 +115,7 @@ const MasterPanel = (props) => {
         Patch
       </p>
       <div id="saveB" className="button" onClick={save}>
-        <p id="saveBL" className="buttonLabel" style={{ cursor: 'pointer' }}>
+        <p id="saveBL" className="buttonLabel" style={{ cursor: "pointer" }}>
           Save
         </p>
       </div>

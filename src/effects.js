@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import './styles/effects.css';
-import Knob from './knob';
-import KnobBorder from './knobBorder';
+import { useState, useEffect } from "react";
+import "./styles/effects.css";
+import Knob from "./knob";
+import KnobBorder from "./knobBorder";
 
 const Effects = (props) => {
   const { patches, patchNumber, stagingPatch } = props;
@@ -22,7 +22,7 @@ const Effects = (props) => {
         <Knob
           rotation={distortionKnob}
           setRotation={setDistortionKnob}
-          setting={'distortionK'}
+          setting={"distortionK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].distortionK}
         />
@@ -35,7 +35,7 @@ const Effects = (props) => {
         <Knob
           rotation={oFMKnob}
           setRotation={setOFMKnob}
-          setting={'oFMK'}
+          setting={"oFMK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].oFMK}
         />

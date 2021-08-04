@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import './styles/arpeggiator.css';
-import Knob from './knob';
-import KnobBorder from './knobBorder';
-import Bulb from './bulb';
+import { useState, useEffect } from "react";
+import "./styles/arpeggiator.css";
+import Knob from "./knob";
+import KnobBorder from "./knobBorder";
+import Bulb from "./bulb";
 
 const Arpeggiator = (props) => {
   const { patches, patchNumber, stagingPatch } = props;
@@ -39,7 +39,7 @@ const Arpeggiator = (props) => {
         <Knob
           rotation={tempoKnob}
           setRotation={setTempoKnob}
-          setting={'tempoK'}
+          setting={"tempoK"}
           stagingPatch={stagingPatch}
         />
         <p id="tempoKL" className="knobLabel">
@@ -54,7 +54,7 @@ const Arpeggiator = (props) => {
       </p>
       <div id="arpTempoBulb">
         <Bulb
-          blinkClass={'tempoBlink'}
+          blinkClass={"tempoBlink"}
           animation={`tempoBlink ${convertBPM(
             tempoKnob
           )}ms step-start 0s infinite`}
@@ -97,7 +97,7 @@ const Arpeggiator = (props) => {
         <Knob
           rotation={rhythmKnob}
           setRotation={setRhythmKnob}
-          setting={'rhythmK'}
+          setting={"rhythmK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].rhythmK}
         />
@@ -117,7 +117,7 @@ const Arpeggiator = (props) => {
           rotation={directionKnob}
           setRotation={setDirectionKnob}
           notch={8}
-          setting={'rhythm2K'}
+          setting={"rhythm2K"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].rhythm2K}
         />
@@ -152,7 +152,7 @@ const Arpeggiator = (props) => {
           rotation={aOSKnob}
           setRotation={setAOSKnob}
           notch={4}
-          setting={'arpOctavesK'}
+          setting={"arpOctavesK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].arpOctavesK}
         />

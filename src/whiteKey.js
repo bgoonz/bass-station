@@ -1,4 +1,4 @@
-import './styles/whiteKey.css';
+import "./styles/whiteKey.css";
 
 const WhiteKey = () => {
   return <div className="whiteKey" />;

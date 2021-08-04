@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
-import './styles/filters.css';
-import Knob from './knob';
-import KnobBig from './knobBig';
-import KnobBorder from './knobBorder';
-import KnobBigBorder from './knobBigBorder';
-import Bulb from './bulb';
-import SwitchAB from './switchAB';
-import SwitchABC from './switchABC';
+import { useState, useEffect } from "react";
+import "./styles/filters.css";
+import Knob from "./knob";
+import KnobBig from "./knobBig";
+import KnobBorder from "./knobBorder";
+import KnobBigBorder from "./knobBigBorder";
+import Bulb from "./bulb";
+import SwitchAB from "./switchAB";
+import SwitchABC from "./switchABC";
 
 const Filters = (props) => {
   const { patches, patchNumber, stagingPatch } = props;
@@ -50,10 +50,10 @@ const Filters = (props) => {
     <div className="absolute">
       <div id="filtersTypeS">
         <SwitchAB
-          orientation={'Horizontal'}
+          orientation={"Horizontal"}
           position={filtersTypeS}
           setPosition={setFiltersTypeS}
-          setting={'filtersTypeS'}
+          setting={"filtersTypeS"}
           stagingPatch={stagingPatch}
         />
       </div>
@@ -61,23 +61,23 @@ const Filters = (props) => {
         Type
       </p>
       <div id="filtersType1Bulb">
-        <Bulb on={filtersTypeS === 'A'} />
+        <Bulb on={filtersTypeS === "A"} />
       </div>
       <p id="filtersClassicL" className="subLabelXSmall">
         Classic
       </p>
       <div id="filtersType2Bulb">
-        <Bulb on={filtersTypeS === 'B'} />
+        <Bulb on={filtersTypeS === "B"} />
       </div>
       <p id="filtersAcidL" className="subLabelXSmall">
         Acid
       </p>
       <div id="filtersSlopeS">
         <SwitchAB
-          orientation={'Horizontal'}
+          orientation={"Horizontal"}
           position={filtersSlopeS}
           setPosition={setFiltersSlopeS}
-          setting={'filtersSlopeS'}
+          setting={"filtersSlopeS"}
           stagingPatch={stagingPatch}
         />
       </div>
@@ -85,23 +85,23 @@ const Filters = (props) => {
         Slope
       </p>
       <div id="filtersSlope1Bulb">
-        <Bulb on={filtersSlopeS === 'A'} />
+        <Bulb on={filtersSlopeS === "A"} />
       </div>
       <p id="filters12DBL" className="subLabelXSmall">
         12dB
       </p>
       <div id="filtersSlope2Bulb">
-        <Bulb on={filtersSlopeS === 'B'} />
+        <Bulb on={filtersSlopeS === "B"} />
       </div>
       <p id="filters24DBL" className="subLabelXSmall">
         24dB
       </p>
       <div id="filtersShapeS">
         <SwitchABC
-          orientation={'Horizontal'}
+          orientation={"Horizontal"}
           position={filtersShapeS}
           setPosition={setFiltersShapeS}
-          setting={'filtersShapeS'}
+          setting={"filtersShapeS"}
           stagingPatch={stagingPatch}
         />
       </div>
@@ -109,13 +109,13 @@ const Filters = (props) => {
         Shape
       </p>
       <div id="filtersShape1Bulb">
-        <Bulb on={filtersShapeS === 'A'} />
+        <Bulb on={filtersShapeS === "A"} />
       </div>
       <div id="filtersShape2Bulb">
-        <Bulb on={filtersShapeS === 'B'} />
+        <Bulb on={filtersShapeS === "B"} />
       </div>
       <div id="filtersShape3Bulb">
-        <Bulb on={filtersShapeS === 'C'} />
+        <Bulb on={filtersShapeS === "C"} />
       </div>
       <p id="filtersLPL" className="subLabelLarge">
         LP
@@ -135,7 +135,7 @@ const Filters = (props) => {
         <Knob
           rotation={overdriveKnob}
           setRotation={setOverdriveKnob}
-          setting={'overdriveK'}
+          setting={"overdriveK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].overdriveK}
         />
@@ -148,7 +148,7 @@ const Filters = (props) => {
         <Knob
           rotation={resonanceKnob}
           setRotation={setResonanceKnob}
-          setting={'resonanceK'}
+          setting={"resonanceK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].resonanceK}
         />
@@ -161,7 +161,7 @@ const Filters = (props) => {
         <Knob
           rotation={filterMEDKnob}
           setRotation={setFilterMEDKnob}
-          setting={'filtersMEDK'}
+          setting={"filtersMEDK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].filtersMEDK}
         />
@@ -174,7 +174,7 @@ const Filters = (props) => {
         <Knob
           rotation={filterLFOKnob}
           setRotation={setFilterLFOKnob}
-          setting={'filtersLFO2K'}
+          setting={"filtersLFO2K"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].filtersLFO2K}
         />
@@ -191,7 +191,7 @@ const Filters = (props) => {
         <KnobBig
           rotation={frequencyKnob}
           setRotation={setFrequencyKnob}
-          setting={'frequencyK'}
+          setting={"frequencyK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].frequencyK}
         />

@@ -8,15 +8,15 @@ export const knobSpin = (
 ) => {
   let clientStart = null;
 
-  const amountBackArrowLight = document.getElementById('amountBackArrowLight');
+  const amountBackArrowLight = document.getElementById("amountBackArrowLight");
   const amountForwardArrowLight = document.getElementById(
-    'amountForwardArrowLight'
+    "amountForwardArrowLight"
   );
 
   clientStart = e.clientX;
-  const appContainer = document.getElementById('appContainer');
-  appContainer.style.cursor = 'grabbing';
-  document.addEventListener('mousemove', function (e) {
+  const appContainer = document.getElementById("appContainer");
+  appContainer.style.cursor = "grabbing";
+  document.addEventListener("mousemove", function (e) {
     let amountToMove = (e.clientX - clientStart) * 2;
     let moveDifference = rotation + amountToMove;
     if (
@@ -27,20 +27,20 @@ export const knobSpin = (
       setRotation(moveDifference);
       stagingPatch.current[setting] = moveDifference;
       if (originalLevel > moveDifference) {
-        amountForwardArrowLight.className = 'amountArrowLightOff';
-        amountBackArrowLight.className = 'amountArrowLightOn';
+        amountForwardArrowLight.className = "amountArrowLightOff";
+        amountBackArrowLight.className = "amountArrowLightOn";
       } else if (originalLevel < moveDifference) {
-        amountBackArrowLight.className = 'amountArrowLightOff';
-        amountForwardArrowLight.className = 'amountArrowLightOn';
+        amountBackArrowLight.className = "amountArrowLightOff";
+        amountForwardArrowLight.className = "amountArrowLightOn";
       } else if (originalLevel === moveDifference) {
-        amountBackArrowLight.className = 'amountArrowLightOff';
-        amountForwardArrowLight.className = 'amountArrowLightOff';
+        amountBackArrowLight.className = "amountArrowLightOff";
+        amountForwardArrowLight.className = "amountArrowLightOff";
       }
     }
   });
-  document.addEventListener('mouseup', function () {
+  document.addEventListener("mouseup", function () {
     clientStart = null;
-    appContainer.style.cursor = 'default';
+    appContainer.style.cursor = "default";
   });
 };
 
@@ -59,15 +59,15 @@ export const knobSpinNotch = (
   };
   let clientStart = null;
 
-  const amountBackArrowLight = document.getElementById('amountBackArrowLight');
+  const amountBackArrowLight = document.getElementById("amountBackArrowLight");
   const amountForwardArrowLight = document.getElementById(
-    'amountForwardArrowLight'
+    "amountForwardArrowLight"
   );
 
   clientStart = e.clientX;
-  const appContainer = document.getElementById('appContainer');
-  appContainer.style.cursor = 'grabbing';
-  document.addEventListener('mousemove', function (e) {
+  const appContainer = document.getElementById("appContainer");
+  appContainer.style.cursor = "grabbing";
+  document.addEventListener("mousemove", function (e) {
     let amountToMove = (e.clientX - clientStart) * 2;
     let moveDifference = rotation + amountToMove;
     if (
@@ -79,19 +79,19 @@ export const knobSpinNotch = (
       setRotation(notchedMovement);
       stagingPatch.current[setting] = notchedMovement;
       if (originalLevel > notchedMovement) {
-        amountForwardArrowLight.className = 'amountArrowLightOff';
-        amountBackArrowLight.className = 'amountArrowLightOn';
+        amountForwardArrowLight.className = "amountArrowLightOff";
+        amountBackArrowLight.className = "amountArrowLightOn";
       } else if (originalLevel < notchedMovement) {
-        amountBackArrowLight.className = 'amountArrowLightOff';
-        amountForwardArrowLight.className = 'amountArrowLightOn';
+        amountBackArrowLight.className = "amountArrowLightOff";
+        amountForwardArrowLight.className = "amountArrowLightOn";
       } else if (originalLevel === notchedMovement) {
-        amountBackArrowLight.className = 'amountArrowLightOff';
-        amountForwardArrowLight.className = 'amountArrowLightOff';
+        amountBackArrowLight.className = "amountArrowLightOff";
+        amountForwardArrowLight.className = "amountArrowLightOff";
       }
     }
   });
-  document.addEventListener('mouseup', function () {
+  document.addEventListener("mouseup", function () {
     clientStart = null;
-    appContainer.style.cursor = 'default';
+    appContainer.style.cursor = "default";
   });
 };

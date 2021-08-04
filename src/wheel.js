@@ -1,4 +1,4 @@
-import './styles/wheel.css';
+import "./styles/wheel.css";
 
 const Wheel = (props) => {
   const wheelAdjust = (e) => {
@@ -7,9 +7,9 @@ const Wheel = (props) => {
     let clientStart = null;
 
     clientStart = e.clientY;
-    const appContainer = document.getElementById('appContainer');
-    appContainer.style.cursor = 'grabbing';
-    document.addEventListener('mousemove', function (e) {
+    const appContainer = document.getElementById("appContainer");
+    appContainer.style.cursor = "grabbing";
+    document.addEventListener("mousemove", function (e) {
       let amountToMove = (e.clientY - clientStart) * 0.06;
       let moveDifference = props.position + amountToMove;
       if (
@@ -20,10 +20,10 @@ const Wheel = (props) => {
         props.setPosition(moveDifference);
       }
     });
-    document.addEventListener('mouseup', function () {
+    document.addEventListener("mouseup", function () {
       clientStart = null;
-      appContainer.style.cursor = 'default';
-      if (props.type === 'Pitch') {
+      appContainer.style.cursor = "default";
+      if (props.type === "Pitch") {
         props.setPosition(3.75);
       }
     });

@@ -1,4 +1,4 @@
-import './styles/knobBigBorder.css';
+import "./styles/knobBigBorder.css";
 
 const knobBigBorderArr = [];
 

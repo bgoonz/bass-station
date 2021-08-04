@@ -37,7 +37,7 @@
   font-weight: 600;
   transform: translate(7rem, 16.5rem);
   color: #3aadec;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 #analogue {
@@ -135,7 +135,7 @@
   color: #3b373c61;
   opacity: 0.5;
   font-size: 4rem;
-  font-family: 'Digital-7';
+  font-family: "Digital-7";
   margin: 0px;
   letter-spacing: 0.2rem;
   transform: translate(-0.4rem, 0.2rem);
@@ -152,7 +152,7 @@
 
 .screenNumber {
   font-size: 4rem;
-  font-family: 'Digital-7';
+  font-family: "Digital-7";
   color: #fc4e70;
   margin: 0px;
   letter-spacing: 0.2rem;
@@ -182,7 +182,7 @@
 .savePending {
   animation: savePending 0.5s step-start 0s infinite;
   font-size: 4rem;
-  font-family: 'Digital-7';
+  font-family: "Digital-7";
   color: #fc4e70;
   margin: 0px;
   letter-spacing: 0.2rem;

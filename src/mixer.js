@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import './styles/mixer.css';
-import Knob from './knob';
-import KnobBorder from './knobBorder';
-import SwitchABC from './switchABC';
+import { useState, useEffect } from "react";
+import "./styles/mixer.css";
+import Knob from "./knob";
+import KnobBorder from "./knobBorder";
+import SwitchABC from "./switchABC";
 
 const Mixer = (props) => {
   const { patches, patchNumber, stagingPatch } = props;
@@ -27,7 +27,7 @@ const Mixer = (props) => {
         <Knob
           rotation={oSC1Knob}
           setRotation={setOSC1Knob}
-          setting={'mixerOsc1K'}
+          setting={"mixerOsc1K"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].mixerOsc1K}
         />
@@ -40,7 +40,7 @@ const Mixer = (props) => {
         <Knob
           rotation={oSC2Knob}
           setRotation={setOSC2Knob}
-          setting={'mixerOsc2K'}
+          setting={"mixerOsc2K"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].mixerOsc2K}
         />
@@ -53,7 +53,7 @@ const Mixer = (props) => {
         <Knob
           rotation={subOscKnob}
           setRotation={setSubOscKnob}
-          setting={'mixerSubK'}
+          setting={"mixerSubK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].mixerSubK}
         />
@@ -66,7 +66,7 @@ const Mixer = (props) => {
         <Knob
           rotation={eRNKnob}
           setRotation={setERNKnob}
-          setting={'mixerUtilityK'}
+          setting={"mixerUtilityK"}
           stagingPatch={stagingPatch}
           originalLevel={patches[patchNumber].mixerUtilityK}
         />
@@ -83,10 +83,10 @@ const Mixer = (props) => {
       </p>
       <div id="mixerUtilityS">
         <SwitchABC
-          orientation={'Vertical'}
+          orientation={"Vertical"}
           position={eRNS}
           setPosition={setERNS}
-          setting={'mixerUtilityS'}
+          setting={"mixerUtilityS"}
           stagingPatch={stagingPatch}
         />
       </div>

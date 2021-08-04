@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import './styles/oPM.css';
-import Wheel from './wheel';
+import { useState } from "react";
+import "./styles/oPM.css";
+import Wheel from "./wheel";
 
 const OPM = () => {
   const [pitchWheel, setPitchWheel] = useState(3.75);

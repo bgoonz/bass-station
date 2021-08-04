@@ -1,6 +1,6 @@
-import './styles/keyboard.css';
-import WhiteKey from './whiteKey';
-import BlackKey from './blackKey';
+import "./styles/keyboard.css";
+import WhiteKey from "./whiteKey";
+import BlackKey from "./blackKey";
 
 const Keyboard = () => {
   let whiteKeyArr = [];
