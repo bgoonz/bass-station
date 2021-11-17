@@ -1,4 +1,4 @@
-## Welcome to Bass Station II!
+## Bass Station 
 
 ![Bass Station II Main Photo](https://github.com/bgoonz/bass-station/blob/master/demo-keys.gif?raw=true)
 
